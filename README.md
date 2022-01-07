@@ -1,5 +1,7 @@
 # grpc-msgpackgen-sample
 
-```shell
-protoc -I./schema --go_out=plugins=grpc:./pb ./schema/*.proto
-```
+## How to run
+
+1. make protoc
+2. make server
+3. launch another shell & make client
