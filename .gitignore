@@ -12,6 +12,8 @@
 *.out
 *.coverprofile
 
+pb
+
 .DS_Store
 .idea
 **/tmp
