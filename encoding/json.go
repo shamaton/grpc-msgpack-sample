@@ -1,4 +1,3 @@
-// Package encoding defines the JSON jsonCodec.
 package encoding
 
 import (
@@ -8,6 +7,8 @@ import (
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 )
+
+const JsonCodecName = "json"
 
 // jsonCodec implements encoding.Codec to encode messages into JSON.
 type jsonCodec struct {

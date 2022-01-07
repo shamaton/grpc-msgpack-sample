@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/shamaton/grpc-msgpackgen-sample/encoding"
-
 	"github.com/shamaton/grpc-msgpackgen-sample/pb"
 	"google.golang.org/grpc"
 )
@@ -16,7 +15,7 @@ func main() {
 
 	opts := []grpc.DialOption{
 		grpc.WithInsecure(),
-		grpc.WithDefaultCallOptions(grpc.CallContentSubtype(encoding.JsonCodecName)),
+		grpc.WithDefaultCallOptions(grpc.CallContentSubtype(encoding.MsgpackCodecName)),
 	}
 
 	// Set up a connection to the server.

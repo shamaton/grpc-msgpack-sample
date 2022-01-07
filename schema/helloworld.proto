@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package pb;
+option go_package = "github.com/shamaton/grpc-msgpackgen-sample/pb";
 
 // The greeting service definition.
 service Greeter {

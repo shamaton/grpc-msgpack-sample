@@ -1,0 +1,3 @@
+[submodule "protobuf-go"]
+	path = protobuf-go
+	url = git@github.com:shamaton/protobuf-go.git
