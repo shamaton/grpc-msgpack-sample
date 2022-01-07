@@ -1,4 +1,4 @@
-# grpc-msgpackgen-sample
+# grpc-msgpack-sample
 
 ## How to run
 
