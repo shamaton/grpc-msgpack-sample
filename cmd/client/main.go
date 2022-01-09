@@ -13,8 +13,6 @@ import (
 
 func main() {
 
-	encoding.RegisterCodec()
-
 	opts := []grpc.DialOption{
 		grpc.WithInsecure(),
 		grpc.WithDefaultCallOptions(grpc.CallContentSubtype(encoding.MsgpackCodecName)),
