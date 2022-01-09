@@ -10,7 +10,6 @@ import (
 
 const MsgpackCodecName = "msgpack"
 
-// jsonCodec implements encoding.Codec to encode messages into JSON.
 type msgpackCodec struct {
 }
 
@@ -21,11 +20,12 @@ func (c *msgpackCodec) Marshal(v interface{}) ([]byte, error) {
 	}
 
 	b, err := msgpack.Marshal(msg)
-	log.Println("byte size: ", len(b))
+	log.Printf("send bytes: % x", b)
 	return b, err
 }
 
 func (c *msgpackCodec) Unmarshal(data []byte, v interface{}) error {
+	log.Printf("recv bytes: % x", data)
 	_, ok := v.(proto.Message)
 	if !ok {
 		return fmt.Errorf("not a proto message but %T: %v", v, v)
@@ -33,7 +33,6 @@ func (c *msgpackCodec) Unmarshal(data []byte, v interface{}) error {
 	return msgpack.Unmarshal(data, v)
 }
 
-// Name returns the identifier of the jsonCodec.
 func (c *msgpackCodec) Name() string {
 	return MsgpackCodecName
 }

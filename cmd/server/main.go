@@ -27,7 +27,9 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	log.Println(encoding.JsonCodecName)
+
+	encoding.RegisterCodec()
+
 	s := grpc.NewServer()
 	pb.RegisterGreeterServer(s, &service{})
 	s.Serve(l)

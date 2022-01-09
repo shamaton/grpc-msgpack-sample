@@ -4,7 +4,7 @@ import (
 	"google.golang.org/grpc/encoding"
 )
 
-func init() {
+func RegisterCodec() {
 	encoding.RegisterCodec(new(jsonCodec))
 	encoding.RegisterCodec(new(msgpackCodec))
 }
